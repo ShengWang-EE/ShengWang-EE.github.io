@@ -7,8 +7,9 @@ author_profile: true
 
 ## Books
 
-- Yi Ding, Yonghua Song, **Hongxun Hui** and Changzheng Shao. [Integration of Air Conditioning and Heating into Modern Power Systems—Enabling Demand Response and Energy Efficiency](https://link.springer.com/book/10.1007%2F978-981-13-6420-4). *Springer*; 2019. [[PDF](https://huihongxun.github.io/files/2019_Book_IntegrationOfAirConditioningAn.pdf)]
+- **Sheng Wang**, Lalit Goel, Yi Ding. [Risk Evaluation of Electricity Systems with Large Penetration of Renewable Generations](https://www.routledge.com/Renewable-Energy-Integration-to-the-Grid-A-Probabilistic-Perspective/Gupta-Tomar-Prusty-Gupta/p/book/9780367747947). *Taylor&Francis Group*; 2020. [[PDF](https://huihongxun.github.io/files/2019_Book_IntegrationOfAirConditioningAn.pdf)] (Book chapter)
 
+- (Comming soon) Yonghua Song, Yi Ding, Minglei Bao, **Sheng Wang**, Changzheng Shao. [Risk modeling, analysis and control of multi-energy systems]. *Springer Nature*; 2023. 
 
 
 ------
