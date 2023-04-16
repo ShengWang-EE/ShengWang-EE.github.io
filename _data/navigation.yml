@@ -2,9 +2,11 @@
 main:
   - title: "Publications"
     url: /publications/
+    # including books, papers, patents, etc
 
-  - title: "Teaching & Talks"
-    url: /teaching/    
+  - title: "Projects"
+    url: /projects/    
+    # introducing projects
 
   # - title: "Teaching" #此处两行改了，同时_config.yml文件的216行改了
   #  url: /teaching/    #无
@@ -12,11 +14,11 @@ main:
   # - title: "Portfolio"
   #  url: /portfolio/   #无
         
-  - title: "Professional Services"
+  - title: "Professional Activities"
     url: /professional/
-    
-  - title: "Group & Research"  #有
+    # including editors, reviewers, talks
+  - title: "Research highlights"  #有
     url: /research/
-    
+    # pictures and highlights
   - title: "Education" #有
     url: /education/
