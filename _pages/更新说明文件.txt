@@ -1,0 +1,19 @@
+只需要修改4个文件：
+
+1.about.md
+这个文件修改：个人介绍 + News
+
+2.publications.md
+这个文件修改：发表书籍 + 发表论文 + 发表会议 + 已提交的论文
+
+3.research.md
+这个文件修改：科研项目经历 + 教学经历 + 学术活动（审稿人等）
+
+4.education.md
+这个文件修改：教育经历 + 学术经历 + 荣誉奖项 + 社区贡献
+
+5.修改页尾用 _includes/footer.html 以及 _inclueds/footer/custom.html
+
+6.修改页头用 _data/navigation.yml
+
+7.最重要的文件是 _config.yml 可以设置整个网页

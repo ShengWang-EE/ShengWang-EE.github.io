@@ -1,0 +1,22 @@
+# main links links
+main:
+  - title: "Publications"
+    url: /publications/
+
+  - title: "Teaching & Talks"
+    url: /teaching/    
+
+  # - title: "Teaching" #此处两行改了，同时_config.yml文件的216行改了
+  #  url: /teaching/    #无
+    
+  # - title: "Portfolio"
+  #  url: /portfolio/   #无
+        
+  - title: "Professional Services"
+    url: /professional/
+    
+  - title: "Group & Research"  #有
+    url: /research/
+    
+  - title: "Education" #有
+    url: /education/
