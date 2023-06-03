@@ -1,32 +1,16 @@
 ---
 layout: archive
 permalink: /
-title: "Home Page - Hongxun Hui 惠紅勛"
+title: "Home Page - Sheng Wang 王盛"
 excerpt: "About me"
 author_profile: true
 ---
 
 
 
-Dr. Hongxun Hui is a Research Assistant Professor with the State Key Laboratory of Internet of Things for Smart City, University of Macau. Previously, he received a B. Eng. degree in 2015 and Ph.D. degree in 2020, respectively, both from the College of Electrical Engineering in Zhejiang University. From 2018 to 2019, he was a visiting scholar at the Advanced Research Institute in Virginia Tech. He was elected in the 1st batch of the *Academic Rising Star Program* for Ph.D. at Zhejiang University in 2018. From 2020 to 2022, he was a Post-doctoral Fellow with the State Key Laboratory of Internet of Things for Smart City, University of Macau. His research interests are in the Internet of Things technologies for smart energy, optimization of integrated energy systems, control of flexible resources, and energy economics. He has authored/co-authored 1 international book, more than 60 papers (including more than 30 SCI journal papers), and 16 issued patents. One of the papers was selected as the ESI Highly Cited Papers (Top 1%).
+Dr. Sheng Wang is a post-doctoral fellow with the State Key Laboratory of Internet of Things for Smart City, University of Macau. He received his Ph.D. degree from Zhejiang University in 2021, and worked as a research fellow at State Grid (Suzhou) City & Energy Research Institute for one year. His research interests include the operation and evaluation of integrated energy systems and low-carbon strategies for urban development. He has (co)authored more than 20 papers and book chapters, and more than ten patents. He was the reviewer of more than ten journals, a member of IEEE PES Electric Vehicle Satellite Committee-China-EV Participating Electricity Market Trading Subcommittee, a session chair of IEEE I&CPS, and a guest editor for Integrated Smart Energy. He was elected in the Academic Rising Star Program for Ph.D. students at Zhejiang University. He got the first prize for advances in electric power science and technology of Zhejiang, the first prize for the best paper in the Energy Internet Committee of CSEE, and the best paper in the Integrated Smart Energy International Conference.
 
-Dr. Hui is Young Editorial Board Member and Guest Editor of high level journals, including *Applied Energy*, *Engineering Reports*, *Integrated Intelligent Energy*, etc. He also serves as reviewer for many international journals, including *IEEE Transactions on Power Systems*, *IEEE Transactions on Smart Grid*, *IEEE Transactions on Sustainable Energy*, *IEEE Transactions on Industrial Informatics*, *Applied Energy*, etc. He was the recipient of the Outstanding Reviewer Award from the *Journal of Modern Power Systems and Clean Energy*. Besides, he got the *Best Paper Award* of IEEE iSPEC 2021, the *First Prize* and the *Best Innovation Award* of the 2021 National AI Application Competition in Power Dispatching, and *Excellent Paper Award* of the Integrated Smart Energy Conference 2022.
-
-Here is Dr. Hongxun Hui's [CV](https://huihongxun.github.io/files/CV/HongxunHui_CV20230303.pdf).
-
-
-
-
-
-------
-
-# Open for Applications 2022
-
-**<font color='DodgerBlue'>Notice 1: PhD</font>** for undergraduate or master students for 2023/2024 academic year (2023/2024學年招收博士研究生，包括直博、普博) is open for application (DDL of 1st batch: October 31, 2023; DDL of 2nd batch: February 28, 2024), check the notice [here](https://grs.um.edu.mo/index.php/prospective-students/doctoral-degrees-programmes/). All successful applicants will be funded by the UM Phd [Scholarship](https://grs.um.edu.mo/index.php/prospective-students/phd-funding/um-macao-phd-scholarship/) (20,000MOP/Month) or [Assistantship](https://grs.um.edu.mo/index.php/prospective-students/phd-funding/phd-assistantship/) (12,500MOP/Month). Some other links: [推薦免試](https://grs.um.edu.mo/index.php/prospective-student/recommended-direct-admission/?lang=zh-hant); [UM-UK 3+1 program](https://www.um.edu.mo/news-centre/news-and-events/news-and-press-releases/detail/48008/)” (Imperial College London + University of Macau).
-
-**<font color='DodgerBlue'>Notice 2: Postdoc</font>** for Ph. D graduates from well-known universities who have obtained a Ph. D degree (no more than 3 years or expected to obtain Ph. D degree within 3 months). Universities recognized as the top 300 in the world or 985/211/double top universities are preferred. Please illustrate the excellent research experience, including awards, articles, patents, etc. The postdoc position keeps long-term recruitment (長期招聘). (25,000~40,000MOP/month)
-
-**<font color='DodgerBlue'>Notice 3: ZUMRI</font>** We are recruiting full-time Research Scientist, Postdoctoral Scholar and Engineers to join our R&D group at [Zhuhai UM Science & Technology Research Institute](http://www.zumri.cn/). 我們在[珠海澳大科技研究院](http://www.zumri.cn/)智慧城市研發中心設立產學研團隊，正招收全職研究員、博士後、工程師等，提供极具竞争力的薪酬和良好的科研与工作条件，歡迎發送簡歷等至 hongxunhui@um.edu.mo 咨詢或直接網上[申請](http://www.zumri.cn/recruitData/12_13_32.html)！
+Here is Dr. Sheng Wang's [CV](https://huihongxun.github.io/files/CV/HongxunHui_CV20230303.pdf).
 
 
 
