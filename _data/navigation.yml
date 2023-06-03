@@ -1,5 +1,8 @@
 # main links links
 main:
+  - title: "Education" #有
+    url: /education/
+    
   - title: "Publications"
     url: /publications/
     # including books, papers, patents, etc
@@ -20,5 +23,4 @@ main:
   - title: "Research highlights"  #有
     url: /research/
     # pictures and highlights
-  - title: "Education" #有
-    url: /education/
+
