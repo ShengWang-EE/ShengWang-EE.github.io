@@ -8,7 +8,8 @@ author_profile: true
  - Postdoctoral Research Fellow, [State Key Laboratory of Internet of Things for Smart City](https://skliotsc.um.edu.mo/)
  - Academic Advisor: [Prof. Yonghua Song](https://rto.um.edu.mo/biography/) 
 
-### [State Grid (Suzhou) City&Energy Research Institute]()
+### State Grid (Suzhou) City&Energy Research Institute (08/2021-06/2022)
+ - [Urban Energy Strategic Planning Devision](http://www.sgeri.sgcc.com.cn/html/sgerien/gb/index.shtml)
  - Research Engineer in Urban Energy Strategic Planning
 
 ### Zhejiang University (09/2016-06/2021) 
