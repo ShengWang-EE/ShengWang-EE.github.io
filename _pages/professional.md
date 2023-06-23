@@ -1,4 +1,5 @@
 ---
+---
 layout: archive
 title: "Professional Acctivities"
 permalink: /professional/
@@ -72,4 +73,27 @@ author_profile: true
 
 ------
 
-## **Speech & Talk**  
+
+## **Speeches & talks**  
+
+
+- [Reliability issues during the decarbonization of energy systems – the case of hydrogen blended electricity and gas systems](https://ShengWang-EE.github.io/files/professional/ReliabilityIssuesDuring.pdf). *Young scholar conference at Beijing Jiaotong University*. 2023.2. (in Chinese)
+
+- [Operational Risk for Integrated Power and Gas Systems Considering Varying Hydrogen Concentrations With High Penetration of Wind](https://ShengWang-EE.github.io/files/professional/OperationalRiskfor.ppt). *2023 IEEE IAS Global Conference on Renewable Energy and Hydrogen Technologies (GlobConHT)*. 2023.3.
+
+- [Steady-State Optimal Power Flow in Integrated Electricity and Gas Transmission Systems with Hydrogen Injections](https://ShengWang-EE.github.io/files/professional/Steady-StateOptimalPower.pdf). *2022 IEEE/IAS Industrial and Commercial Power System Asia (I&CPS Asia)*. 2022.7.
+
+- [Study on Carbon Emission and Impact Factor based on LMDI method: the Case of Jiangsu](https://ShengWang-EE.github.io/files/professional/StudyonCarbon.pdf). *2021 International Conference on Power System Technology (POWERCON)*. 2021.12.
+
+- [Operational reliability evaluation of distributed multi-energy systems considering optimal control of energy storages](https://ShengWang-EE.github.io/files/professional/OperationalReliabilityEvaluation.pdf). *2021 IEEE/IAS Industrial and Commercial Power System Asia (I&CPS Asia)*. 2021.7.
+
+- [Contingency Management in Integrated Electricity and Gas Systems Considering Gas Flow Dynamics](https://ShengWang-EE.github.io/files/professional/ContingencyManagementin.pdf). *2020 Applied Energy Symposium: low carbon cities& urban energy systems (CUE)*. 2020.10.
+
+- [A bi-Level equivalent model of scheduling an energy hub to provide operating reserve for power systems](https://ShengWang-EE.github.io/files/professional/ABi-LevelEquivalent.pdf). *2020 Tsinghua-HUST-IET Electrical Engineering Academic Forum*. 2020.5.
+
+- [Optimal Sizing and Asset Utilization Efficiency Analysis of the Distributed Multi-Energy System Considering the Energy](https://ShengWang-EE.github.io/files/professional/OptimalSizingand.pdf). *Academic annual conference of Chinese Society for Electrical Engineering (CSEE)*. 2019.8. (in Chinese)
+
+- [Economic impact of power to gas in integrated electricity and gas systems with high wind penetration](https://ShengWang-EE.github.io/files/professional/EconomicImpactof.pdf). *2018 IEEE Innovative Smart Grid Technologies-Asia (ISGT Asia)*. 2018.5.
+
+- [Cooperation of demand response and traditional power generations for providing spinning reserve](https://ShengWang-EE.github.io/files/professional/CooperationofDemand.pdf). *2017 International Conference on Applied Energy (ICAE)*. 2017.8.
+

@@ -21,7 +21,7 @@ main:
     url: /professional/
     # including editors, reviewers, talks
     
-  - title: "Research highlights"  #有
+  - title: "Research Highlights"  #有
     url: /research/
     # pictures and highlights
 
