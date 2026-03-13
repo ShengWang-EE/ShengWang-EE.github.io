@@ -1,0 +1,18 @@
+---
+import Container from '@/components/Container.astro';
+import { getSiteConfig } from '@/lib/config';
+
+const config = getSiteConfig();
+---
+
+{config.elements.footer && (
+  <Container as="footer" class="pt-24">
+    <p class="text-center text-muted-foreground text-sm">
+      &copy; {new Date().getFullYear()} Sheng Wang. Built with <a
+        href="https://astro.build"
+        target="_blank"
+        rel="noopener noreferrer">Astro</a
+      > and adapted from CVfolio.
+    </p>
+  </Container>
+)}

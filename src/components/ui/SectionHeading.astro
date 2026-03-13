@@ -1,0 +1,27 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+  href?: string;
+  linkLabel?: string;
+}
+
+const { title, description, href, linkLabel } = Astro.props;
+---
+
+<div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between sm:gap-4">
+  <div class="flex flex-col gap-2">
+    <span class="text-headings text-lg font-semibold">{title}</span>
+    {description && (
+      <p class="text-sm text-muted-foreground max-w-[42rem]">{description}</p>
+    )}
+  </div>
+  {href && linkLabel && (
+    <a
+      href={href}
+      class="text-sm text-headings font-medium hover:opacity-70 transition-opacity"
+    >
+      {linkLabel}
+    </a>
+  )}
+</div>

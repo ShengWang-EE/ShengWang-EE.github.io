@@ -1,0 +1,132 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Container from "@/components/Container.astro";
+import SectionHeading from "@/components/ui/SectionHeading.astro";
+import {
+  awardGroups,
+  communityContributions,
+  reviewService,
+  serviceRoles,
+  siteTitle,
+  talks,
+} from "@/data/site";
+
+const seo = {
+  title: `Activities | ${siteTitle}`,
+  description:
+    "Professional activities, review service, talks, and honors of Sheng Wang.",
+  type: "website",
+};
+---
+
+<BaseLayout seo={seo}>
+  <Container as="section" class="py-6">
+    <div class="flex flex-col gap-6">
+      <SectionHeading
+        title="Activities"
+        description="Editorial roles, academic service, invited talks, and selected honors."
+      />
+    </div>
+  </Container>
+
+  <Container as="section" class="py-6">
+    <div class="flex flex-col gap-5">
+      <SectionHeading title="Professional Roles" />
+      <ul class="flex flex-col gap-4">
+        {serviceRoles.map((role) => (
+          <li class="flex flex-col gap-1">
+            <span class="text-headings font-medium">{role.title}</span>
+            {role.url ? (
+              <a
+                href={encodeURI(role.url)}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-sm text-foreground hover:opacity-75 transition-opacity"
+              >
+                {role.organization}
+              </a>
+            ) : (
+              <span class="text-sm text-foreground">{role.organization}</span>
+            )}
+          </li>
+        ))}
+      </ul>
+    </div>
+  </Container>
+
+  <Container as="section" class="py-6">
+    <div class="grid gap-10 md:grid-cols-2">
+      {reviewService.map((group) => (
+        <div class="flex flex-col gap-4">
+          <SectionHeading title={group.title} />
+          <ul class="flex flex-col gap-2">
+            {group.items.map((item) => (
+              <li class="text-sm text-foreground">- {item}</li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </Container>
+
+  <Container as="section" class="py-6">
+    <div class="flex flex-col gap-5">
+      <SectionHeading title="Talks and Presentations" />
+      <ul class="flex flex-col gap-6">
+        {talks.map((talk) => (
+          <li class="flex gap-5">
+            <div class="relative min-w-28 shrink-0">
+              <span class="text-muted-foreground text-sm">{talk.year}</span>
+            </div>
+            <div class="flex flex-col gap-1">
+              {talk.url ? (
+                <a
+                  href={encodeURI(talk.url)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-headings font-medium hover:opacity-75 transition-opacity"
+                >
+                  {talk.title}
+                </a>
+              ) : (
+                <span class="text-headings font-medium">{talk.title}</span>
+              )}
+              <span class="text-sm text-foreground">
+                {talk.event} | {talk.location}
+              </span>
+              {talk.note && (
+                <span class="text-sm text-muted-foreground">{talk.note}</span>
+              )}
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </Container>
+
+  <Container as="section" class="py-6">
+    <div class="grid gap-10 md:grid-cols-2">
+      {awardGroups.map((group) => (
+        <div class="flex flex-col gap-4">
+          <SectionHeading title={group.title} />
+          <ul class="flex flex-col gap-2">
+            {group.items.map((item) => (
+              <li class="text-sm text-foreground">- {item}</li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </Container>
+
+  <Container as="section" class="py-6">
+    <div class="flex flex-col gap-4">
+      <SectionHeading title="Community Contribution" />
+      <ul class="flex flex-col gap-2">
+        {communityContributions.map((item) => (
+          <li class="text-sm text-foreground">- {item}</li>
+        ))}
+      </ul>
+    </div>
+  </Container>
+</BaseLayout>

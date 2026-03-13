@@ -1,0 +1,45 @@
+---
+import type { Project } from "@/data/site";
+
+interface Props {
+  project: Project;
+}
+
+const { project } = Astro.props;
+---
+
+<li class="py-0.5">
+  <div class="flex gap-5">
+    <div class="relative min-w-24 shrink-0 md:min-w-32 xl:min-w-36">
+      <span class="text-muted-foreground text-sm">{project.period}</span>
+    </div>
+    <div class="flex flex-col gap-3">
+      <div class="flex flex-col gap-1">
+        <span class="text-headings font-medium">{project.title}</span>
+        <span class="text-sm text-foreground">
+          {project.role} | {project.sponsor}
+          {project.funding && <span> | {project.funding}</span>}
+        </span>
+      </div>
+      {project.summary && (
+        <p class="text-sm text-muted-foreground max-w-[42rem]">
+          {project.summary}
+        </p>
+      )}
+      {project.links && project.links.length > 0 && (
+        <div class="flex gap-2 flex-wrap">
+          {project.links.map((link) => (
+            <a
+              href={encodeURI(link.url)}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-xs text-headings border border-border rounded-full px-3 py-1 hover:bg-muted-foreground/10 transition-colors"
+            >
+              {link.label}
+            </a>
+          ))}
+        </div>
+      )}
+    </div>
+  </div>
+</li>

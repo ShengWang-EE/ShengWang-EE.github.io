@@ -1,0 +1,292 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Container from "@/components/Container.astro";
+import Author from "@/components/ui/Author.astro";
+import SectionHeading from "@/components/ui/SectionHeading.astro";
+import PublicationItem from "@/components/ui/PublicationItem.astro";
+import ProjectItem from "@/components/ui/ProjectItem.astro";
+import { DEFAULT_CONFIGURATION } from "@/lib/constants";
+import {
+  contactLinks,
+  cvUrl,
+  education,
+  experiences,
+  featuredProjects,
+  featuredPublications,
+  heroSummary,
+  researchAreas,
+  selectedAwards,
+  serviceRoles,
+  siteTitle,
+  talks,
+} from "@/data/site";
+
+const seo = {
+  title: `${siteTitle} | Integrated Energy Systems`,
+  description:
+    "Research profile, publications, projects, and professional activities of Sheng Wang.",
+  type: "website",
+};
+---
+
+<BaseLayout seo={seo}>
+  <Container as="section" class="py-6">
+    <Author {...DEFAULT_CONFIGURATION.author} />
+  </Container>
+
+  <Container as="section" class="py-6">
+    <div class="grid gap-8 xl:grid-cols-[minmax(0,1.45fr)_minmax(19rem,0.9fr)] xl:items-start">
+      <div class="flex flex-col gap-6">
+        <SectionHeading
+          title="About"
+          description="Research profile and current focus."
+        />
+        <div class="prose dark:prose-invert max-w-none">
+          {heroSummary.map((paragraph) => <p>{paragraph}</p>)}
+        </div>
+        <div>
+          <a
+            href={encodeURI(cvUrl)}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex text-sm text-headings border border-border rounded-full px-4 py-2 hover:bg-muted-foreground/10 transition-colors"
+          >
+            Download CV
+          </a>
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-6 xl:sticky xl:top-28">
+        <div class="rounded-3xl border border-border bg-muted-foreground/8 p-6">
+          <div class="flex flex-col gap-4">
+            <SectionHeading
+              title="Research Areas"
+              description="Core themes across energy system modelling and resilience."
+            />
+            <div class="flex gap-2 flex-wrap">
+              {researchAreas.map((area) => (
+                <span class="text-xs text-headings border border-border rounded-full px-3 py-1">
+                  {area}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-3xl border border-border bg-muted-foreground/8 p-6">
+          <div class="flex flex-col gap-5">
+            <SectionHeading
+              title="Contact"
+              description="Direct links for collaboration and profile access."
+            />
+            <ul class="flex flex-col gap-3">
+              {contactLinks.map((link) => (
+                <li class="py-0.5">
+                  <div class="flex flex-col gap-1">
+                    <span class="text-xs uppercase tracking-[0.18em] text-muted-foreground">
+                      {link.label}
+                    </span>
+                    <a
+                      class="text-headings font-medium break-all"
+                      rel="noopener noreferrer"
+                      target={link.url.startsWith("mailto:") ? undefined : "_blank"}
+                      href={encodeURI(link.url)}
+                    >
+                      {link.name}
+                    </a>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Container>
+
+  <Container as="section" class="py-6">
+    <div class="grid gap-10 xl:grid-cols-[minmax(0,1.4fr)_minmax(20rem,0.85fr)] xl:items-start">
+      <div class="flex flex-col gap-5">
+        <SectionHeading
+          title="Experience"
+          description="Appointments across academia, industry, and applied energy research."
+        />
+        <ul class="flex flex-col gap-8">
+          {experiences.map((experience) => (
+            <li class="py-0.5">
+              <div class="flex gap-5">
+                <div class="relative min-w-24 shrink-0 md:min-w-32">
+                  <span class="text-muted-foreground text-sm">
+                    {experience.period}
+                  </span>
+                </div>
+                <div class="flex flex-col gap-3">
+                  <div class="flex flex-col">
+                    <span class="text-headings font-medium">
+                      {experience.title}
+                    </span>
+                    <span class="text-sm text-foreground">
+                      {experience.organization}
+                    </span>
+                    <span class="text-sm text-muted-foreground">
+                      {experience.location}
+                    </span>
+                  </div>
+                  <p class="text-sm text-muted-foreground max-w-[42rem]">
+                    {experience.summary}
+                  </p>
+                  {experience.highlights && (
+                    <ul class="flex flex-col gap-2">
+                      {experience.highlights.map((item) => (
+                        <li class="text-sm text-foreground">- {item}</li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="flex flex-col gap-5 xl:sticky xl:top-28">
+        <SectionHeading
+          title="Education"
+          description="Formal training in electrical engineering and energy systems."
+        />
+        <ul class="flex flex-col gap-8 rounded-3xl border border-border bg-muted-foreground/8 p-6">
+          {education.map((record) => (
+            <li class="py-0.5">
+              <div class="flex flex-col gap-3">
+                <div class="flex flex-col">
+                  <span class="text-xs uppercase tracking-[0.18em] text-muted-foreground">
+                    {record.period}
+                  </span>
+                  <span class="text-headings font-medium">{record.degree}</span>
+                  <span class="text-sm text-foreground">{record.institution}</span>
+                  {record.advisor && (
+                    <span class="text-sm text-muted-foreground">
+                      Advisor: {record.advisor}
+                    </span>
+                  )}
+                </div>
+                <ul class="flex flex-col gap-2">
+                  {record.details.map((detail) => (
+                    <li class="text-sm text-foreground">- {detail}</li>
+                  ))}
+                </ul>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </Container>
+
+  <Container as="section" class="py-6">
+    <div class="flex flex-col gap-5">
+      <SectionHeading
+        title="Selected Publications"
+        description="Representative work on hydrogen integration, operational reliability, and integrated energy systems."
+        href="/publications"
+        linkLabel="View all"
+      />
+      <ul class="flex flex-col gap-8">
+        {featuredPublications.map((publication) => (
+          <PublicationItem publication={publication} />
+        ))}
+      </ul>
+    </div>
+  </Container>
+
+  <Container as="section" class="py-6">
+    <div class="flex flex-col gap-5">
+      <SectionHeading
+        title="Selected Projects"
+        description="Funded and collaborative projects spanning integrated energy planning, resilience, and hydrogen systems."
+        href="/projects"
+        linkLabel="View all"
+      />
+      <ul class="flex flex-col gap-8">
+        {featuredProjects.map((project) => <ProjectItem project={project} />)}
+      </ul>
+    </div>
+  </Container>
+
+  <Container as="section" class="py-6">
+    <div class="grid gap-10 md:grid-cols-2">
+      <div class="flex flex-col gap-5">
+        <SectionHeading
+          title="Selected Service"
+          description="Editorial and academic community roles."
+          href="/activities"
+          linkLabel="More"
+        />
+        <ul class="flex flex-col gap-4">
+          {serviceRoles.slice(0, 3).map((role) => (
+            <li class="flex flex-col gap-1">
+              <span class="text-headings font-medium">{role.title}</span>
+              {role.url ? (
+                <a
+                  href={encodeURI(role.url)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-sm text-foreground hover:opacity-75 transition-opacity"
+                >
+                  {role.organization}
+                </a>
+              ) : (
+                <span class="text-sm text-foreground">{role.organization}</span>
+              )}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="flex flex-col gap-5">
+        <SectionHeading
+          title="Recent Talks"
+          description="Invited talks and conference presentations."
+          href="/activities"
+          linkLabel="More"
+        />
+        <ul class="flex flex-col gap-4">
+          {talks.slice(0, 3).map((talk) => (
+            <li class="flex flex-col gap-1">
+              <span class="text-headings font-medium">{talk.title}</span>
+              <span class="text-sm text-foreground">
+                {talk.event} | {talk.year}
+              </span>
+              {talk.url && (
+                <a
+                  href={encodeURI(talk.url)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-sm text-muted-foreground hover:text-headings transition-colors"
+                >
+                  View slides
+                </a>
+              )}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </Container>
+
+  <Container as="section" class="py-6">
+    <div class="flex flex-col gap-5">
+      <SectionHeading
+        title="Selected Honors"
+        description="Selected awards and recognitions."
+        href="/activities"
+        linkLabel="View more"
+      />
+      <ul class="flex flex-col gap-3">
+        {selectedAwards.map((award) => (
+          <li class="text-sm text-foreground">- {award}</li>
+        ))}
+      </ul>
+    </div>
+  </Container>
+</BaseLayout>

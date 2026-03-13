@@ -1,0 +1,42 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Container from "@/components/Container.astro";
+import SectionHeading from "@/components/ui/SectionHeading.astro";
+import PublicationItem from "@/components/ui/PublicationItem.astro";
+import { publicationSections, siteTitle } from "@/data/site";
+
+const seo = {
+  title: `Publications | ${siteTitle}`,
+  description:
+    "Journal papers, conference papers, and books by Sheng Wang.",
+  type: "website",
+};
+---
+
+<BaseLayout seo={seo}>
+  <Container as="section" class="py-6">
+    <div class="flex flex-col gap-6">
+      <SectionHeading
+        title="Publications"
+        description="Journal papers, conference papers, books, and manuscripts across integrated energy systems, hydrogen integration, and operational resilience."
+      />
+      <p class="text-sm text-muted-foreground max-w-[34rem]">
+        This page consolidates the publication record from the previous academic
+        homepage into a cleaner Astro-based layout.
+      </p>
+    </div>
+  </Container>
+
+  {publicationSections.map((section) => (
+    <Container as="section" class="py-6">
+      <div class="flex flex-col gap-5">
+        <SectionHeading title={section.title} />
+        <ul class="flex flex-col gap-8">
+          {section.items.map((publication) => (
+            <PublicationItem publication={publication} />
+          ))}
+        </ul>
+      </div>
+    </Container>
+  ))}
+</BaseLayout>

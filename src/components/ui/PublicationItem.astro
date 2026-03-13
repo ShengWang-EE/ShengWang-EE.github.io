@@ -1,0 +1,64 @@
+---
+import type { Publication } from "@/data/site";
+
+interface Props {
+  publication: Publication;
+}
+
+const { publication } = Astro.props;
+const paperUrl = publication.url ? encodeURI(publication.url) : undefined;
+const pdfUrl = publication.pdf ? encodeURI(publication.pdf) : undefined;
+---
+
+<li class="py-0.5">
+  <div class="flex gap-5">
+    <div class="relative min-w-24 shrink-0 md:min-w-32 xl:min-w-36">
+      <span class="text-muted-foreground text-sm">{publication.year}</span>
+    </div>
+    <div class="flex flex-col gap-2">
+      <div class="flex flex-col gap-1">
+        {paperUrl ? (
+          <a
+            href={paperUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-headings font-medium hover:opacity-75 transition-opacity"
+          >
+            {publication.title}
+          </a>
+        ) : (
+          <span class="text-headings font-medium">{publication.title}</span>
+        )}
+        <span class="text-sm text-foreground">{publication.authors}</span>
+        <span class="text-sm text-muted-foreground">
+          {publication.venue}
+          {publication.note && <span> | {publication.note}</span>}
+        </span>
+      </div>
+      {(paperUrl || pdfUrl) && (
+        <div class="flex gap-2 flex-wrap">
+          {paperUrl && (
+            <a
+              href={paperUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-xs text-headings border border-border rounded-full px-3 py-1 hover:bg-muted-foreground/10 transition-colors"
+            >
+              Publisher
+            </a>
+          )}
+          {pdfUrl && (
+            <a
+              href={pdfUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-xs text-headings border border-border rounded-full px-3 py-1 hover:bg-muted-foreground/10 transition-colors"
+            >
+              PDF
+            </a>
+          )}
+        </div>
+      )}
+    </div>
+  </div>
+</li>

@@ -1,0 +1,62 @@
+---
+import Container from '@/components/Container.astro';
+import { getSiteConfig } from '@/lib/config';
+
+const pathname = Astro.url.pathname;
+
+const config = getSiteConfig();
+const navigation = [
+  { label: 'Home', href: '/', active: pathname === '/' },
+  {
+    label: 'Publications',
+    href: '/publications',
+    active: pathname.startsWith('/publications'),
+  },
+  {
+    label: 'Projects',
+    href: '/projects',
+    active: pathname.startsWith('/projects'),
+  },
+  {
+    label: 'Activities',
+    href: '/activities',
+    active: pathname.startsWith('/activities'),
+  },
+  {
+    label: 'CV',
+    href: '/files/CV/CV-Sheng-Wang.pdf',
+    active: false,
+    external: true,
+  },
+];
+---
+{config.elements.header && (
+  <Container
+    as="header"
+    class="w-full max-w-full flex justify-center items-center"
+  >
+    <div
+      class="w-max fixed top-0 mt-5 bg-muted-foreground/40 backdrop-blur-3xl border border-border rounded-full p-1"
+    >
+      <nav class="flex items-center">
+        <ul class="flex items-center gap-1">
+          {navigation.map((item) => (
+            <li>
+              <a
+                href={item.href}
+                rel={item.external ? 'noopener noreferrer' : undefined}
+                target={item.external ? '_blank' : undefined}
+                class:list={[
+                  'font-medium transition-colors block px-5 py-2',
+                  'hover:text-headings',
+                  item.active &&
+                    'text-headings bg-muted-foreground/40 rounded-full',
+                ]}>{item.label}</a
+              >
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </div>
+  </Container>
+)}
