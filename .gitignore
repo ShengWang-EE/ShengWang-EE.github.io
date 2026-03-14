@@ -2,4 +2,5 @@ _site/
 .astro/
 dist/
 node_modules/
+_reference_cvfolio/
 
