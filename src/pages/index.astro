@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import Container from "@/components/Container.astro";
 import Author from "@/components/ui/Author.astro";
@@ -15,6 +16,7 @@ import {
   featuredPublications,
   heroSummary,
   researchAreas,
+  researchHighlights,
   selectedAwards,
   serviceRoles,
   siteTitle,
@@ -101,6 +103,38 @@ const seo = {
           </div>
         </div>
       </div>
+    </div>
+  </Container>
+
+  <Container as="section" class="py-6">
+    <div class="flex flex-col gap-5">
+      <SectionHeading
+        title="Research Highlights"
+        description="A visual snapshot of representative directions across resilience, flexibility, and integrated energy systems."
+      />
+      <ul class="grid gap-6 sm:grid-cols-2 2xl:grid-cols-4">
+        {researchHighlights.map((highlight) => (
+          <li class="group overflow-hidden rounded-3xl border border-border bg-card/80">
+            <div class="relative overflow-hidden border-b border-border">
+              <Image
+                src={highlight.image}
+                alt={highlight.alt}
+                class="aspect-[4/3] w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+                sizes="(max-width: 640px) 100vw, (max-width: 1536px) 50vw, 25vw"
+              />
+              <span class="absolute left-4 top-4 rounded-full bg-background/85 px-3 py-1 text-[11px] font-medium uppercase tracking-[0.18em] text-headings backdrop-blur">
+                {highlight.tag}
+              </span>
+            </div>
+            <div class="flex flex-col gap-3 p-5">
+              <h3 class="text-base font-medium text-headings">{highlight.title}</h3>
+              <p class="text-sm leading-6 text-muted-foreground">
+                {highlight.description}
+              </p>
+            </div>
+          </li>
+        ))}
+      </ul>
     </div>
   </Container>
 

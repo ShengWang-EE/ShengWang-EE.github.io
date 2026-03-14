@@ -1,3 +1,9 @@
+import type { ImageMetadata } from "astro";
+import consumerDemandResponseImage from "@/assets/images/research/research_consumer_DR.png";
+import dataDrivenImage from "@/assets/images/research/research_data_driven.png";
+import regulationPotentialImage from "@/assets/images/research/research_regulation_potential.png";
+import reliabilityNsfcImage from "@/assets/images/research/research_reliability_NSFC.png";
+
 export type ContactLink = {
   label: string;
   name: string;
@@ -85,6 +91,14 @@ export type AwardGroup = {
   items: string[];
 };
 
+export type ResearchHighlight = {
+  title: string;
+  description: string;
+  image: ImageMetadata;
+  alt: string;
+  tag: string;
+};
+
 export const siteTitle = "Sheng Wang";
 export const cvUrl = "/files/CV/CV-Sheng-Wang.pdf";
 
@@ -100,6 +114,41 @@ export const researchAreas = [
   "Reliability, resilience, and risk assessment",
   "Operational optimization and demand-side flexibility",
   "Data-driven planning for low-carbon infrastructure",
+];
+
+export const researchHighlights: ResearchHighlight[] = [
+  {
+    title: "Reliability of Urban Multi-Energy Systems",
+    description:
+      "Methods for short-term and long-term reliability assessment of electricity-gas systems under uncertainty and asset interactions.",
+    image: reliabilityNsfcImage,
+    alt: "Cover image for operational reliability evaluation of urban multi-energy systems.",
+    tag: "Reliability",
+  },
+  {
+    title: "Data-Driven Multi-Energy Platform",
+    description:
+      "Experimental and simulation platforms for multi-energy system analytics, planning, and flexible operational studies.",
+    image: dataDrivenImage,
+    alt: "Poster image for a data-driven multi-energy experiment and simulation platform.",
+    tag: "Platform",
+  },
+  {
+    title: "Flexible Resource Regulation",
+    description:
+      "Research on coordination and regulation technologies for flexible resources in deeply coupled power and communication networks.",
+    image: regulationPotentialImage,
+    alt: "Poster image for flexible resource regulation in integrated energy systems.",
+    tag: "Flexibility",
+  },
+  {
+    title: "Consumer Demand Response",
+    description:
+      "Demand response and service-based self-scheduling for multi-energy customers, energy hubs, and reserve provision.",
+    image: consumerDemandResponseImage,
+    alt: "Poster image for consumer demand response in integrated energy systems.",
+    tag: "Demand Response",
+  },
 ];
 
 export const contactLinks: ContactLink[] = [
