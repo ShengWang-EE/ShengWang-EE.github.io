@@ -1,0 +1,80 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Container from "@/components/Container.astro";
+import SectionHeading from "@/components/ui/SectionHeading.astro";
+import {
+  dcarbonMapPreviewUrl,
+  dcarbonMapRawUrl,
+  dcarbonMapSourceUrl,
+  dcarbonRepoUrl,
+  siteTitle,
+} from "@/data/site";
+
+const seo = {
+  title: `D-caRbon 3D Volume Heatmap | ${siteTitle}`,
+  description:
+    "Interactive 3D heatmap view connected to the D-caRbon GitHub project.",
+  type: "website",
+};
+---
+
+<BaseLayout seo={seo}>
+  <Container as="section" class="py-6">
+    <div class="flex flex-col gap-6">
+      <SectionHeading
+        title="D-caRbon 3D Volume Heatmap"
+        description="Interactive map view from the D-caRbon repository, embedded here so it can be opened directly from this site."
+      />
+      <p class="max-w-[52rem] text-sm leading-7 text-muted-foreground">
+        If the embedded preview is slow to load or blocked by the external host,
+        use the buttons below to open the original GitHub HTML file or the
+        repository directly.
+      </p>
+      <div class="flex flex-wrap gap-3">
+        <a
+          href={encodeURI(dcarbonMapPreviewUrl)}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex text-sm text-headings border border-border rounded-full px-4 py-2 hover:bg-muted-foreground/10 transition-colors"
+        >
+          Open standalone preview
+        </a>
+        <a
+          href={encodeURI(dcarbonMapSourceUrl)}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex text-sm text-headings border border-border rounded-full px-4 py-2 hover:bg-muted-foreground/10 transition-colors"
+        >
+          View GitHub file
+        </a>
+        <a
+          href={encodeURI(dcarbonMapRawUrl)}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex text-sm text-headings border border-border rounded-full px-4 py-2 hover:bg-muted-foreground/10 transition-colors"
+        >
+          Open raw HTML
+        </a>
+        <a
+          href={encodeURI(dcarbonRepoUrl)}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex text-sm text-headings border border-border rounded-full px-4 py-2 hover:bg-muted-foreground/10 transition-colors"
+        >
+          Open repository
+        </a>
+      </div>
+    </div>
+  </Container>
+
+  <Container as="section" class="py-6">
+    <div class="overflow-hidden rounded-[2rem] border border-border bg-card/70 shadow-sm">
+      <iframe
+        src={dcarbonMapPreviewUrl}
+        title="D-caRbon 3D Volume Heatmap"
+        loading="lazy"
+        class="h-[78vh] min-h-[640px] w-full bg-background"
+      />
+    </div>
+  </Container>
+</BaseLayout>

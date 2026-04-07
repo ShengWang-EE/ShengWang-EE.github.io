@@ -64,3 +64,25 @@
     'Segoe UI Symbol', 
     'Noto Color Emoji';
 }
+
+.highlights-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: var(--palette-400) transparent;
+}
+
+.highlights-scroll::-webkit-scrollbar {
+  height: 10px;
+}
+
+.highlights-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.highlights-scroll::-webkit-scrollbar-thumb {
+  background: color-mix(in oklab, var(--palette-400) 75%, transparent);
+  border-radius: 999px;
+}
+
+.highlights-scroll::-webkit-scrollbar-thumb:hover {
+  background: color-mix(in oklab, var(--palette-500) 80%, transparent);
+}
