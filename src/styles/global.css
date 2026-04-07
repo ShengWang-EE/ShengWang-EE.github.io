@@ -1,4 +1,5 @@
 :root {
+  scroll-behavior: smooth;
   font-family: var(--font-inter), sans-serif;
 }
 
@@ -68,6 +69,7 @@
 .highlights-scroll {
   scrollbar-width: thin;
   scrollbar-color: var(--palette-400) transparent;
+  scroll-behavior: smooth;
 }
 
 .highlights-scroll::-webkit-scrollbar {
@@ -85,4 +87,128 @@
 
 .highlights-scroll::-webkit-scrollbar-thumb:hover {
   background: color-mix(in oklab, var(--palette-500) 80%, transparent);
+}
+
+.page-shell {
+  animation: page-fade-in 480ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.page-content > * {
+  animation: section-rise 620ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.page-content > *:nth-child(2) {
+  animation-delay: 70ms;
+}
+
+.page-content > *:nth-child(3) {
+  animation-delay: 120ms;
+}
+
+.page-content > *:nth-child(4) {
+  animation-delay: 170ms;
+}
+
+.site-nav-shell {
+  box-shadow: 0 16px 34px -24px color-mix(in oklab, var(--palette-900) 22%, transparent);
+  transition:
+    transform 220ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 220ms cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 220ms ease;
+}
+
+.site-nav-shell:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 20px 38px -24px color-mix(in oklab, var(--palette-900) 30%, transparent);
+}
+
+.site-nav-link {
+  position: relative;
+  transition:
+    color 220ms ease,
+    background-color 220ms ease,
+    transform 220ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.site-nav-link:hover {
+  color: var(--palette-800);
+  transform: translateY(-1px);
+}
+
+.site-nav-link::after {
+  content: "";
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  bottom: 7px;
+  height: 2px;
+  border-radius: 999px;
+  background: color-mix(in oklab, var(--palette-700) 75%, transparent);
+  transform: scaleX(0.35);
+  opacity: 0;
+  transition:
+    transform 220ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 180ms ease;
+}
+
+.site-nav-link:hover::after,
+.site-nav-link-active::after {
+  transform: scaleX(1);
+  opacity: 1;
+}
+
+.site-nav-link-active {
+  box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--palette-300) 70%, transparent);
+}
+
+.highlight-card {
+  transition:
+    transform 260ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 260ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 220ms ease;
+}
+
+.highlight-card:hover {
+  transform: translateY(-6px);
+  border-color: color-mix(in oklab, var(--palette-500) 28%, var(--palette-300));
+  box-shadow: 0 24px 50px -30px color-mix(in oklab, var(--palette-900) 28%, transparent);
+}
+
+@keyframes page-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes section-rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root,
+  .highlights-scroll {
+    scroll-behavior: auto;
+  }
+
+  .page-shell,
+  .page-content > *,
+  .site-nav-shell,
+  .site-nav-link,
+  .site-nav-link::after,
+  .highlight-card,
+  .highlight-card img {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
 }

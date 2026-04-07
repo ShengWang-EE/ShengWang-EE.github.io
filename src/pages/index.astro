@@ -119,12 +119,12 @@ const seo = {
       </div>
       <ul class="highlights-scroll grid grid-flow-col auto-cols-[minmax(18rem,22rem)] gap-6 overflow-x-auto pb-4 pr-2 snap-x snap-mandatory">
         {researchHighlights.map((highlight) => (
-          <li class="group snap-start overflow-hidden rounded-3xl border border-border bg-card/80">
+          <li class="highlight-card group snap-start overflow-hidden rounded-3xl border border-border bg-card/80">
             <div class="relative overflow-hidden border-b border-border">
               <Image
                 src={highlight.image}
                 alt={highlight.alt}
-                class="aspect-[4/3] w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+                class="aspect-[4/3] w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
                 sizes="(max-width: 640px) 88vw, 22rem"
               />
               <span class="absolute left-4 top-4 rounded-full bg-background/85 px-3 py-1 text-[11px] font-medium uppercase tracking-[0.18em] text-headings backdrop-blur">

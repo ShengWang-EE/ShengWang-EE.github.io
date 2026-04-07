@@ -22,12 +22,6 @@ const navigation = [
     href: '/activities',
     active: pathname.startsWith('/activities'),
   },
-  {
-    label: 'CV',
-    href: '/files/CV/CV-Sheng-Wang.pdf',
-    active: false,
-    external: true,
-  },
 ];
 ---
 {config.elements.header && (
@@ -36,7 +30,7 @@ const navigation = [
     class="w-full max-w-full flex justify-center items-center"
   >
     <div
-      class="w-max fixed top-0 mt-5 bg-muted-foreground/40 backdrop-blur-3xl border border-border rounded-full p-1"
+      class="site-nav-shell w-max fixed top-0 mt-5 bg-muted-foreground/40 backdrop-blur-3xl border border-border rounded-full p-1"
     >
       <nav class="flex items-center">
         <ul class="flex items-center gap-1">
@@ -47,10 +41,8 @@ const navigation = [
                 rel={item.external ? 'noopener noreferrer' : undefined}
                 target={item.external ? '_blank' : undefined}
                 class:list={[
-                  'font-medium transition-colors block px-5 py-2',
-                  'hover:text-headings',
-                  item.active &&
-                    'text-headings bg-muted-foreground/40 rounded-full',
+                  'site-nav-link font-medium block px-5 py-2 rounded-full',
+                  item.active && 'site-nav-link-active text-headings bg-muted-foreground/40',
                 ]}>{item.label}</a
               >
             </li>

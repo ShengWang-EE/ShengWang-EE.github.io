@@ -106,8 +106,8 @@ export const siteTitle = "Sheng Wang";
 export const cvUrl = "/files/CV/CV-Sheng-Wang.pdf";
 export const dcarbonRepoUrl = "https://github.com/ShengWang-EE/D-caRbon";
 export const dcarbonMapSourceUrl =
-  "https://github.com/ShengWang-EE/D-caRbon/blob/main/data/volume_heatmap_3d.html";
-export const dcarbonMapHostedUrl = "/maps/volume_heatmap_3d.html";
+  "https://github.com/ShengWang-EE/D-caRbon/blob/main/data/carbon_emission_heatmap_3d.html";
+export const dcarbonMapHostedUrl = "/maps/carbon_emission_heatmap_3d.html";
 
 export const heroSummary = [
   "Dr. Sheng Wang is a NUAcT Fellow in the School of Engineering at Newcastle University. His work focuses on reliability, resilience, and optimization of integrated energy systems, with a particular emphasis on hydrogen integration and low-carbon infrastructure.",
@@ -125,12 +125,12 @@ export const researchAreas = [
 
 export const researchHighlights: ResearchHighlight[] = [
   {
-    title: "D-caRbon Interactive 3D Map",
+    title: "D-caRbon Carbon Emission 3D Map",
     description:
-      "A directly accessible 3D heatmap viewer connected to the D-caRbon project, available from this website for quick exploration.",
+      "A directly accessible 3D carbon emission heatmap connected to the D-caRbon project, available from this website for quick exploration.",
     image: dcarbonMapImage,
-    alt: "Stylized preview image for the D-caRbon interactive 3D volume heatmap.",
-    tag: "Interactive Map",
+    alt: "Stylized preview image for the D-caRbon 3D carbon emission heatmap.",
+    tag: "Carbon Map",
     href: "/projects/volume-heatmap-3d",
     linkLabel: "Open map",
   },

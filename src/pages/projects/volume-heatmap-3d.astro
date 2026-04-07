@@ -10,9 +10,9 @@ import {
 } from "@/data/site";
 
 const seo = {
-  title: `D-caRbon 3D Volume Heatmap | ${siteTitle}`,
+  title: `D-caRbon Carbon Emission 3D Map | ${siteTitle}`,
   description:
-    "Interactive 3D heatmap view connected to the D-caRbon GitHub project.",
+    "Interactive 3D carbon emission heatmap connected to the D-caRbon GitHub project.",
   type: "website",
 };
 ---
@@ -21,7 +21,7 @@ const seo = {
   <Container as="section" class="py-6">
     <div class="flex flex-col gap-6">
       <SectionHeading
-        title="D-caRbon 3D Volume Heatmap"
+        title="D-caRbon Carbon Emission 3D Map"
         description="Interactive map view hosted directly inside this website for stable access."
       />
       <p class="max-w-[52rem] text-sm leading-7 text-muted-foreground">
@@ -59,7 +59,7 @@ const seo = {
     <div class="overflow-hidden rounded-[2rem] border border-border bg-card/70 shadow-sm">
       <iframe
         src={dcarbonMapHostedUrl}
-        title="D-caRbon 3D Volume Heatmap"
+        title="D-caRbon Carbon Emission 3D Map"
         loading="lazy"
         class="h-[78vh] min-h-[640px] w-full bg-background"
       />
