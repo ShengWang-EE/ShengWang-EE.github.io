@@ -107,9 +107,7 @@ export const cvUrl = "/files/CV/CV-Sheng-Wang.pdf";
 export const dcarbonRepoUrl = "https://github.com/ShengWang-EE/D-caRbon";
 export const dcarbonMapSourceUrl =
   "https://github.com/ShengWang-EE/D-caRbon/blob/main/data/volume_heatmap_3d.html";
-export const dcarbonMapRawUrl =
-  "https://raw.githubusercontent.com/ShengWang-EE/D-caRbon/main/data/volume_heatmap_3d.html";
-export const dcarbonMapPreviewUrl = `https://htmlpreview.github.io/?${dcarbonMapRawUrl}`;
+export const dcarbonMapHostedUrl = "/maps/volume_heatmap_3d.html";
 
 export const heroSummary = [
   "Dr. Sheng Wang is a NUAcT Fellow in the School of Engineering at Newcastle University. His work focuses on reliability, resilience, and optimization of integrated energy systems, with a particular emphasis on hydrogen integration and low-carbon infrastructure.",
@@ -126,6 +124,16 @@ export const researchAreas = [
 ];
 
 export const researchHighlights: ResearchHighlight[] = [
+  {
+    title: "D-caRbon Interactive 3D Map",
+    description:
+      "A directly accessible 3D heatmap viewer connected to the D-caRbon project, available from this website for quick exploration.",
+    image: dcarbonMapImage,
+    alt: "Stylized preview image for the D-caRbon interactive 3D volume heatmap.",
+    tag: "Interactive Map",
+    href: "/projects/volume-heatmap-3d",
+    linkLabel: "Open map",
+  },
   {
     title: "Reliability of Urban Multi-Energy Systems",
     description:
@@ -157,16 +165,6 @@ export const researchHighlights: ResearchHighlight[] = [
     image: consumerDemandResponseImage,
     alt: "Poster image for consumer demand response in integrated energy systems.",
     tag: "Demand Response",
-  },
-  {
-    title: "D-caRbon Interactive 3D Map",
-    description:
-      "A directly accessible 3D heatmap viewer connected to the D-caRbon project, available from this website for quick exploration.",
-    image: dcarbonMapImage,
-    alt: "Stylized preview image for the D-caRbon interactive 3D volume heatmap.",
-    tag: "Interactive Map",
-    href: "/projects/volume-heatmap-3d",
-    linkLabel: "Open map",
   },
 ];
 
