@@ -131,7 +131,7 @@ export const researchHighlights: ResearchHighlight[] = [
     image: dcarbonMapImage,
     alt: "Stylized preview image for the D-caRbon 3D carbon emission heatmap.",
     tag: "Carbon Map",
-    href: "/projects/volume-heatmap-3d",
+    href: "/projects/carbon-emission-heatmap-3d",
     linkLabel: "Open map",
   },
   {
